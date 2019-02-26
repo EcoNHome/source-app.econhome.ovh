@@ -1,42 +1,42 @@
-<template>
-  <div id="app">
-      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-              <ul class="nav flex-column">
-                  <li class="nav-item">
-                      <router-link class="nav-link" to="/">Accueil</router-link>
-                  </li>
-                  <li class="nav-item">
-                      <router-link class="nav-link" to="/about">About</router-link>
-                  </li>
-                  <li class="nav-item">
-                      <router-link class="nav-link" to="/pouet">Pouet</router-link>
-                  </li>
-              </ul>
-          </div>
-      </nav>
-    <router-view/>
-  </div>
+<template lang="html">
+    <div class="">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="#">EcoN'Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/">Accueil</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/manage">Gérer</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/monitor">Monitorer</router-link>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Lucas
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Paramètres</a>
+                        <a class="dropdown-item" href="#">Se Déconnecter</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <router-view />
+    </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+    name: 'app'
 }
-#nav {
-  padding: 30px;
-}
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="css" scoped>
 </style>

@@ -1,16 +1,44 @@
 <template lang="html">
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Accueil</h1>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <main role="main" class="container">
+        <h1>Vos dernières consomations</h1>
+        <canvas id="myChart"></canvas>
     </main>
 </template>
 
 <script>
+import Chart from 'chart.js';
+
 export default {
-  name: 'home'
+    name: 'home',
+    methods: {
+        createChart() {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                    datasets: [{
+                        label: "Graphique sur l'année",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [50, 45, 35, 30, 25, 10, 10, 10, 10 ,20, 30, 40]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {}
+            });
+        }
+    },
+    mounted() {
+      this.createChart();
+    }
 }
+
+
 </script>
 
 <style lang="css" scoped>
