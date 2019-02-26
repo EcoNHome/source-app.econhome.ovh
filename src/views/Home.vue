@@ -1,7 +1,7 @@
 <template lang="html">
     <main role="main" class="container">
         <h1>Vos dernières consomations</h1>
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" class="my-4 w-100" width="900" height="380"></canvas>
     </main>
 </template>
 
