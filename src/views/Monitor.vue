@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// TODO: mettre un bouton pour switche chaque graph entre 1 mois et 3 jours
 import Chart from 'chart.js';
 
 export default {

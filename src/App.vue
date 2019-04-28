@@ -36,6 +36,9 @@
 export default {
     name: 'app'
 }
+
+// TODO: tester sur un cookie de stockage/localstorage est present avec un token disponible et verifier avec le backend nodejs qu'il correspond bien  un utilisateur
+
 </script>
 
 <style lang="css" scoped>

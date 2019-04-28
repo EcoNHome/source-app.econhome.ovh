@@ -33,10 +33,9 @@
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title"><small class="text-muted"></small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li></li>
-        </ul>
-        <input type="range" class="custom-range" min="0" max="25" value="3" id="customRange2">
+        <button type="button" class="btn btn-sm col-md-4 btn-outline-success mr-2">Confort</button>
+        <button type="button" class="btn btn-sm col-md-3 btn-outline-primary mr-2">Eco</button>
+        <button type="button" class="btn btn-sm col-md-4 btn-outline-secondary">Normal</button>
       </div>
     </div>
 
